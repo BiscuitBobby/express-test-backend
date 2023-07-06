@@ -7,4 +7,14 @@ router.get("/", (req, res) =>
     }
 )
 
+router.get("/:num", (req, res) =>
+    {
+        res.send(`Le User ${req.params.num}`)
+    }
+).put((req, res) => {
+    res.send(`Update Le User ${req.params.num}`)
+}).delete((req, res) => {
+    res.send(`DeleteLe User ${req.params.num}`)
+})
+
 module.exports = router
